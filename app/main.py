@@ -10,4 +10,4 @@ app = FastAPI()
 def on_startup():
     SQLModel.metadata.create_all(engine)
 
-app.include_router(user.router, prefix="/users", tags=["Users"])
+app.include_router(user.router)
